@@ -3,9 +3,13 @@
 # SPDX-License-Identifier: Apache-2.0
 # Contact: qubitium@modelcloud.ai, x.com/qubitium
 
+#[build-system]
+#requires = ["setuptools>=77.0.1,<83", "wheel", "cmake>=3.27", "ninja"]
+#build-backend = "setuptools.build_meta"
+
 [build-system]
-requires = ["setuptools>=77.0.1,<83", "wheel", "cmake>=3.27", "ninja"]
-build-backend = "setuptools.build_meta"
+requires = ["meson-python", "meson", "ninja"]
+build-backend = "mesonpy"
 
 [project]
 name = "PyPcre"
