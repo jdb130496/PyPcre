@@ -35,16 +35,20 @@ sources = files(
   'pcre_ext/util.c',
   'pcre_ext/memory.c',
 )
-
 py.extension_module('pcre_ext_c',
   sources,
   dependencies: [dep_py, pcre2_dep],
   c_args: ['-DPCRE2_STATIC'],
   install: true,
-  subdir: 'pcre'
 )
-
 py.install_sources(
   'pcre/__init__.py',
+  'pcre/_stdlib_re.py',
+  'pcre/cache.py',
+  'pcre/error.py',
+  'pcre/flags.py',
+  'pcre/pcre.py',
+  'pcre/re_compat.py',
+  'pcre/threads.py',
   subdir: 'pcre'
 )
