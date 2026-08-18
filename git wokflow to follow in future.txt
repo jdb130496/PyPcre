@@ -1,0 +1,7 @@
+git push origin main                # 1. push your work
+git fetch upstream
+git merge upstream/main             # 2. bring in upstream changes, keep yours
+git push origin main                # push the merge to your fork
+pip install -e . --no-build-isolation --no-cache-dir `
+  -Csetup-args="-Dpcre2_include_dir=D:\Programs\pcre2-clang-win\include" `
+  -Csetup-args="-Dpcre2_library=D:\Programs\pcre2-clang-win\lib\pcre2-8-static.lib"   # 3. only if merge touched meson.build/pyproject.toml/pcre_ext/*.c
