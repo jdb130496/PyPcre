@@ -4,8 +4,8 @@
 # Contact: qubitium@modelcloud.ai, x.com/qubitium
 
 [build-system]
-requires = ["setuptools>=79.0.0,<85", "wheel", "cmake>=3.27", "ninja"]
-build-backend = "setuptools.build_meta"
+requires = ["meson-python", "meson", "ninja"]
+build-backend = "mesonpy"
 
 [project]
 name = "PyPcre"
