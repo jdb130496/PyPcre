@@ -1,0 +1,4 @@
+option('pcre2_include_dir', type: 'string', value: '',
+  description: 'Path to PCRE2 include directory (overrides pkg-config)')
+option('pcre2_library', type: 'string', value: '',
+  description: 'Explicit path to pcre2-8 library file')
